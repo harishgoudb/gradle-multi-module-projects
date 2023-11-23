@@ -10,11 +10,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: ArtifactoryGradle@1
+- task: JFrogToolsInstaller@1
   inputs:
-    gradleBuildFile: 'build.gradle'
-    tasks: 'artifactoryPublish'
-    artifactoryResolverService: 'gradlesc'
-    sourceRepo: 'gradle-gradle-release'
-    artifactoryDeployerService: 'gradlesc'
-    targetRepo: 'gradle-gradle-dev-local'
+    artifactoryConnection: 'testingg'
+    cliInstallationRepo: 'jfrog-cli-v2-new'
+    installCustomVersion: true
+    cliVersion: '2.51.0'
+    installExtractors: true
+    extractorsInstallationRepo: 'extractors'
