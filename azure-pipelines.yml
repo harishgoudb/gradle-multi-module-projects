@@ -13,7 +13,6 @@ steps:
 - task: ArtifactoryGradle@1
   inputs:
     gradleBuildFile: 'build.gradle'
-    options: '-d'
     tasks: 'artifactoryPublish'
     artifactoryResolverService: 'gradlesc'
     sourceRepo: 'gradle-gradle-release'
